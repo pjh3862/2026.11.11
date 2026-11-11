@@ -2,8 +2,8 @@
 // 내 Supabase 로 옮길 때: url · anonKey 를 내 프로젝트 값으로, 카카오를 설정하지 않았으면 kakao: false. 안내 = docs/내_깃허브로_옮기기.md
 // prefix 는 supabase/auth.sql 의 표 이름 앞부분과 같아야 한다.
 window.AUTH_CONFIG = {
-  "url": "https://hcmgdztsgjvzcyxyayaj.supabase.co",
-  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjbWdkenRzZ2p2emN5eHlheWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0MzU4ODcsImV4cCI6MjA4NzAxMTg4N30.gznaPzY1l8qDAPsEyYNR9KS7f7VqS3xaw-_2HTSwSZw",
+  "url": "https://hicqnamjekemugbficay.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpY3FuYW1qZWtlbXVnYmZpY2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMwODQxNjYsImV4cCI6MjEwODY2MDE2Nn0.0W8-1lfpcI_2HWqlqD06X8agM0e3cJlXKyM-C4n3_UE",
   "prefix": "data1005",
   "kakao": true,
   "idleMinutes": 30,
