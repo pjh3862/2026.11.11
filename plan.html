@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기획서 — 공정 재고 · C/T</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.plan-figs figure{margin:0 0 22px;} .plan-figs img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;}
+.plan-figs figcaption{font-size:13px;color:var(--sub);text-align:center;margin-top:6px;}
+.plan td{white-space:normal;} .plan td .btn{min-height:36px;white-space:nowrap;}
+h3{font-size:15px;margin:16px 0 6px;} main ul{margin:0 0 10px 20px;}
+:root{--ink:#152232;--sub:#5b6b7b;--line:#d8e0e8;--brand:#154b6e;--bg:#f5f7fa;--container-pad:20px}
+@media (min-width:640px){:root{--container-pad:28px}} @media (min-width:1024px){:root{--container-pad:40px}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Pretendard,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--brand)} .wrap,.topnav-inner{max-width:calc(1100px + 2*var(--container-pad));margin:0 auto;padding:0 var(--container-pad)}
+.topnav{background:#0d3350;color:#fff;position:sticky;top:0;z-index:5} .topnav-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;min-height:56px}
+.topnav-brand{color:#fff;text-decoration:none;font-weight:700} .topnav-brand small{font-weight:400;opacity:.75;margin-left:6px}
+.topnav-links{list-style:none;display:flex;gap:4px;margin:0;padding:0} .topnav-links a{color:#dbe7f0;text-decoration:none;padding:8px 12px;border-radius:8px;display:block} .topnav-links a.active,.topnav-links a:hover{background:rgba(255,255,255,.14);color:#fff}
+.hero{background:linear-gradient(180deg,#154b6e,#0d3350);color:#fff;padding:40px 0 36px} .hero h1{margin:6px 0 10px;font-size:clamp(24px,3.4vw,34px);color:#fff} .hero p{margin:0;opacity:.9;max-width:860px} .eyebrow{font-size:13px;opacity:.8}
+main{padding:28px 0 40px} .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:0 0 20px} .sub{color:var(--sub)}
+.tablewrap{overflow-x:auto} table{border-collapse:collapse;width:100%;font-size:14.5px} th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top} th{background:#eef3f7;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:6px 14px;border-radius:8px;border:1px solid var(--brand);text-decoration:none;font-weight:600} .btn.primary{background:var(--brand);color:#fff}
+footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--sub);font-size:13.5px}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="주요 메뉴">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">공정 재고 · C/T <small>data10-05 · 기획 박주헌</small></a>
+    <ul class="topnav-links">
+      <li><a href="index.html">도구</a></li>
+      <li><a href="plan.html" class="active" aria-current="page">기획서</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">현장 데이터 디지털화 전문가과정 · 2차수 · 프로젝트 05 · 기획서 v2.0</div>
+  <h1>공정 재고 · C/T 기획서</h1>
+  <p>기초재고를 한 번 적고 현장에서 공정 실적(시작 · 멈춤 · 다시 시작 · 종료)을 넣으면 아이템 · 공정별 지금 재고, 실제 걸린 시간(C/T), 공정별 일별 생산수량을 보여 주는 도구입니다.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card">
+  <h2 style="margin-top:0">기획서 내려받기</h2>
+  <p class="sub">파이프라인 · 아키텍처 · 와이어프레임 · 개발일지가 들어간 워드 문서입니다. 버전마다 따로 남깁니다.</p>
+  <div class="tablewrap plan"><table><thead><tr><th>버전</th><th>날짜</th><th>바뀐 점</th><th>파일</th></tr></thead><tbody><tr><td><b>v2.0</b></td><td>2026-11-10</td><td>최종 기획서 — 파이프라인 · 아키텍처 · 와이어프레임 정리 / 로그인 · 사용 신청 · 관리자 승인(요청자 Supabase 로 옮길 수 있게) / 로그인 전 대문</td><td><a class="btn primary" href="docs/기획서/data10-05_박주헌_공정재고CT_기획서_v2.0.docx" download>워드 내려받기</a></td></tr></tbody></table></div>
+</div>
+<div class="card plan">
+  <h2 style="margin-top:0">요구사항과 구현</h2>
+  <div class="tablewrap"><table><thead><tr><th>기획서 요구</th><th>구현</th></tr></thead><tbody><tr><td>실적 현장 전산입력</td><td>휴대폰 실적 입력 — 타이머(start · stop · restart · end, 새로고침에도 이어짐)와 직접 적기</td></tr><tr><td>출하 대비 재고현황 자동 산출(3차: 기초재고 + 실적 → 공정별 재고현황)</td><td>기초재고 + 이 공정 실적 − 다음 공정이 가져감 = 완료재고, 대시보드 표 · 그래프 · 「계산 보기」</td></tr><tr><td>공정별 실적 분석</td><td>공정별 일별 생산수량 · 일 평균 · 평균에서 ±30% 벗어난 날(많음 · 적음)과 그날 실적, 공정별 C/T</td></tr><tr><td>출하도 공정 실적으로 입력(10-30 답)</td><td>「출하」를 모든 아이템의 마지막 공정으로 자동으로 붙이고 출하 실적은 마지막 공정 재고에서 뺌</td></tr><tr><td>첫 공정 원자재 재고는 고려하지 않음 · 공정당 인원은 따지지 않음(10-30 답)</td><td>첫 공정은 앞 공정 차감 없음, C/T 는 작업 인원 수와 관계없이 순작업 시간 ÷ 수량</td></tr><tr><td>실제 관리 아이템 목록 그대로 넣기(10-30 첨부)</td><td>한 줄에 공정 하나 모양 엑셀 읽기 · 받기, 옛 「공정 순서」 한 칸 양식도 읽음</td></tr><tr><td>고객사 발주서 · 납품이력 자동 다운로드</td><td>3차 범위 재설정으로 뺐습니다(고객사 포털 확인 뒤 다시 검토)</td></tr><tr><td>여러 휴대폰 실적을 한곳에</td><td>2단계 — 지금은 이 브라우저에 저장, 엑셀로 받기</td></tr></tbody></table></div>
+</div>
+<div class="card plan-figs"><h2 style="margin-top:0">그림으로 보기</h2><figure><img src="docs/img/pipeline.png" alt="처리 흐름(파이프라인)" loading="lazy"><figcaption>처리 흐름(파이프라인)</figcaption></figure><figure><img src="docs/img/architecture.png" alt="구성(아키텍처)" loading="lazy"><figcaption>구성(아키텍처)</figcaption></figure><figure><img src="docs/img/wireframe-1.png" alt="와이어프레임 — 로그인 전 대문" loading="lazy"><figcaption>와이어프레임 — 로그인 전 대문</figcaption></figure><figure><img src="docs/img/wireframe-2.png" alt="와이어프레임 — 대시보드 — 공정별 재고현황" loading="lazy"><figcaption>와이어프레임 — 대시보드 — 공정별 재고현황</figcaption></figure><figure><img src="docs/img/wireframe-3.png" alt="와이어프레임 — 실적 입력(휴대폰)" loading="lazy"><figcaption>와이어프레임 — 실적 입력(휴대폰)</figcaption></figure><figure><img src="docs/img/screen.png" alt="실제 화면(예제 데이터)" loading="lazy"><figcaption>실제 화면(예제 데이터)</figcaption></figure></div>
+<div class="card"><h2 style="margin-top:0">개발일지</h2><h3>2026-11-10 · 최종 기획서 · 로그인</h3><ul><li>로그인 · 사용 신청 · 관리자 승인 키트 적용(data1005_members)</li><li>로그인 전 대문 문구를 기획서에서 만듦</li><li>최종 기획서(워드 · plan.html) · README 정리</li><li>로직 테스트 24개 통과</li></ul><h3>2026-11-08 · 4차 — 10-30 답 반영</h3><ul><li>관리 아이템 엑셀을 한 줄에 공정 하나 모양으로 읽기 · 쓰기(옛 양식도 읽음)</li><li>출하도 공정 실적 · C/T 인원 무관 · 첫 공정 원자재 미차감을 화면 안내로 확정</li><li>테스트 24개(5개 추가)</li></ul><h3>2026-10-28 · 3차 범위 재설정</h3><ul><li>logic.js · app.js 새로 씀 — 화면 6개</li><li>타이머(새로고침 · 화면 꺼짐에도 이어짐), 계산 보기, C/T, 일별 ±30%</li><li>옛 판 자료 보관 · 안내</li><li>테스트 20개, 일부러 깨뜨려 확인</li></ul><h3>2026-10-21 · 2차 — 실제 양식 3종</h3><ul><li>재고 체크 통합문서 전용 읽기, 포털 발주서 빈 열 건너뛰기</li><li>재고 체크 입력 화면, 안전재고 산식, 품번 → 모델 연결</li><li>테스트 37개</li></ul><h3>2026-10-20 · 1단계</h3><ul><li>실적 입력 · 엑셀 가져오기(자료 종류 판별) · 재고 과부족 · 진도율 · 공정 투입조정 · AI 프롬프트</li><li>테스트 27개</li></ul></div>
+</div></main>
+<footer><div class="wrap">현장 데이터 디지털화 전문가과정 · 2차수 · 프로젝트 05 · 기획 박주헌 · <a href="https://data10-00.jobability.co.kr/">2차수 프로젝트 모음</a></div></footer>
+</body>
+</html>
